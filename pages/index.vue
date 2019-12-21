@@ -13,6 +13,12 @@
 import EmergencyCards from '../components/EmergencyCards'
 
 export default {
+  head () {
+    return {
+      titleTemplate: null,
+      title: 'PSO2 EQ notice',
+    }
+  },
   components: {
     EmergencyCards
   },
