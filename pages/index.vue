@@ -1,7 +1,9 @@
 <template>
   <main>
     <div class="p-6 bg-gray-200">
-      <h2 class="text-gray-900 text-3xl border-b-2 border-indigo-800 font-bold mb-6">
+      <h2
+        class="text-gray-900 text-3xl border-b-2 border-indigo-800 font-bold mb-6"
+      >
         予告緊急一覧
       </h2>
       <EmergencyCards :emergencies="datalists" />
@@ -13,10 +15,10 @@
 import EmergencyCards from '../components/EmergencyCards'
 
 export default {
-  head () {
+  head() {
     return {
       titleTemplate: null,
-      title: 'PSO2 EQ notice',
+      title: 'PSO2 EQ notice'
     }
   },
   components: {
@@ -24,7 +26,7 @@ export default {
   },
   async asyncData({ $axios }) {
     const prefixAddZero = number => {
-      return (number < 10) ? `0${number}` : number
+      return number < 10 ? `0${number}` : number
     }
 
     const now = new Date()
@@ -38,7 +40,7 @@ export default {
       EventDate: '' + year + month + day,
       EventType: '緊急'
     }
-    let futureDate = 0;
+    let futureDate = 0
 
     await $axios
       .post(url, data)
@@ -66,10 +68,15 @@ export default {
               })
           } else if (i === 0) {
             const data = response.data
-            while (data[0].Hour < now.getHours()) {
-              data.shift()
+            if (data[0].Date === now.getDate()) {
+              if (data[0].Hour !== 0) {
+                while (data[0].Hour < now.getHours()) {
+                  data.shift()
+                }
+              }
+            } else {
+              datalists = [data]
             }
-            datalists = [data]
           }
         }
       })
@@ -78,7 +85,7 @@ export default {
       })
 
     return {
-      datalists: datalists,
+      datalists: datalists
     }
   }
 }
