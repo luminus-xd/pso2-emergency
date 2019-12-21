@@ -19,6 +19,8 @@ export default {
       { hid: 'og:title', property: 'og:title', content: 'PSO2 EQ notice' },
       { hid: 'og:description', property: 'og:description', content: 'PSO2の緊急予告を一週間分見ることが出来るサイトです！ホーム画面に追加することですぐPSO2の緊急を見ることが出来るので試してみてください。' },
       { hid: 'og:image', property: 'og:image', content: 'https://midnight-emergency.firebaseapp.com/ogp.png' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@midnight_dev2' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
