@@ -71,8 +71,6 @@ export default {
         console.log(error)
       })
 
-      console.log(datalists);
-
     return {
       datalists: datalists,
     }

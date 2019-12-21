@@ -37,9 +37,6 @@
 
 <script>
 export default {
-  props: ['emergencies'],
-  mounted() {
-    console.log(this.emergencies[0][0].Date);
-  }
+  props: ['emergencies']
 }
 </script>
