@@ -30,6 +30,11 @@ export default {
   ** Customize the progress-bar color
   */
   loading: { color: '#292929' },
+  loadingIndicator: {
+    name: 'cube-grid',
+    color: '#292929',
+    background: '#e2e8f0'
+  },
   /*
   ** Global CSS
   */
