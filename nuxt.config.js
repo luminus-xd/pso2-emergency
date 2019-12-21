@@ -12,7 +12,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'PSO2の緊急予告を一週間分見ることが出来るサイトです！ホーム画面に追加することですぐPSO2の緊急を見ることが出来るので試してみてください。' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'PSO2 EQ notice' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://midnight-emergency.firebaseapp.com' },
+      { hid: 'og:title', property: 'og:title', content: 'PSO2 EQ notice' },
+      { hid: 'og:description', property: 'og:description', content: 'PSO2の緊急予告を一週間分見ることが出来るサイトです！ホーム画面に追加することですぐPSO2の緊急を見ることが出来るので試してみてください。' },
+      { hid: 'og:image', property: 'og:image', content: 'https://midnight-emergency.firebaseapp.com/ogp.png' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -21,7 +27,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#292929' },
   /*
   ** Global CSS
   */
