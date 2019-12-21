@@ -32,6 +32,9 @@
   @media screen and (min-width: 768px) {
     --column-count: 2;
   }
+  @media screen and (min-width: 1064px) {
+    --column-count: 3;
+  }
 }
 </style>
 
