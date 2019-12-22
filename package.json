@@ -4,6 +4,7 @@
   "description": "pso2 emergency site",
   "author": "eleline",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
