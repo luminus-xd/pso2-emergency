@@ -1,12 +1,12 @@
 <template>
   <div>
     <div v-for="(date, indexDate) in emergencies" :key="indexDate">
-      <div class="text-lg font-bold mb-4">{{ `${date[0].Month}月${date[0].Date}日` }}</div>
+      <div class="text-xl font-bold text-gray-800 border-gray-500 border-l-4 pl-4 mb-4">{{ `${date[0].Month}月${date[0].Date}日` }}</div>
       <ul class="card-index mb-8">
         <li
           v-for="(emergency, index) in date"
           :key="index"
-          class="max-w rounded overflow-hidden bg-white shadow-lg"
+          class="max-w rounded overflow-hidden bg-white shadow-xl"
         >
           <div class="px-6 py-4">
             <h3 class="font-bold text-xl mb-2">{{ emergency.EventName }}</h3>
