@@ -69,11 +69,10 @@ export default {
           } else if (i === 0) {
             const data = response.data
             if (data[0].Date === now.getDate()) {
-              if (data[0].Hour !== 0) {
-                while (data[0].Hour < now.getHours()) {
-                  data.shift()
-                }
+              while (data[0].Hour < now.getHours()) {
+                data.shift()
               }
+              datalists = [data]
             } else {
               datalists = [data]
             }
