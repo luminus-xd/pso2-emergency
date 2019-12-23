@@ -6,8 +6,13 @@
       >
         予告緊急一覧
       </h2>
-      <p class="text-red-600" v-if="datalists !== null | undefined">予告緊急がないか、取得できませんでした</p>
-      <EmergencyCards v-else :emergencies="datalists" />
+      <template v-if="(datalists !== null) | undefined">
+        <div>
+          <p class="text-red-600">😅予告緊急がないか、取得できませんでした...</p>
+          <img class="max-w-full mt-2 rounded shadow" src="../static/pso2-eq-waning.png" alt="このサイトの仕組み" />
+        </div>
+      </template>
+      <EmergencyCards :emergencies="datalists" />
     </div>
   </main>
 </template>
