@@ -1,12 +1,13 @@
 <template>
-  <main>
-    <div class="p-6 bg-gray-200">
+  <main class="min-h-screen bg-gray-200">
+    <div class="p-6 h-full">
       <h2
         class="text-gray-900 text-3xl border-b-2 border-indigo-800 font-bold mb-6"
       >
         予告緊急一覧
       </h2>
-      <EmergencyCards :emergencies="datalists" />
+      <p class="text-red-600" v-if="datalists !== null | undefined">予告緊急がないか、取得できませんでした</p>
+      <EmergencyCards v-else :emergencies="datalists" />
     </div>
   </main>
 </template>
