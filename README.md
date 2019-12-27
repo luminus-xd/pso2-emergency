@@ -31,4 +31,4 @@ npm run build
 
 MIT LICENSE. 
 
-©2019 PSO2 EQ notice.
+©2019 PSO2 EQ notice
