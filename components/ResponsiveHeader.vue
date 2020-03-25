@@ -4,7 +4,7 @@
       class="flex items-center justify-between flex-wrap bg-indigo-800 pl-6 pr-6 pt-4 pb-4"
     >
       <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <h1 class="font-semibold text-xl tracking-tight">PSO2 EQ Notice</h1>
+        <h1 class="font-semibold text-xl tracking-tight">PSO2 緊急一覧</h1>
       </div>
       <!-- <div class="block lg:hidden">
         <button
